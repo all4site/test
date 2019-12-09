@@ -1,18 +1,38 @@
 *
-  box-sizing: border-box
-h1,
-h2
-  text-align: center
-
+	box-sizing: border-box
+body
+	display: grid
+	grid-auto-columns: minmax(300px, 900px)
+	justify-content: center
+	background: rgba(159, 162, 169, 0.1)
 .container
-  width: 800px
-  margin: 80px auto
-
-.box
-  width: 50%
-  float: left
-  padding: 15px
-
+	display: grid
+	grid-column-gap: 20px
+	grid-row-gap: 20px
+	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr))
+	background: rgba(159, 162, 169, 0.2)
+	padding: 10px 20px
+h1,h2
+	text-align: center
+	text-transform: uppercase
 img
-  width: 100%
-  height: auto
+	display: grid
+	width: 100%
+	height: auto
+.box
+	display: grid
+	grid-template-rows: min-content min-content 1fr min-content
+	background: rgba(159, 162, 169, 0.2)
+	padding: 10px 20px
+a
+	justify-self: center
+button
+	padding: 10px 50px
+	border: none
+	background: #ff8f2b
+	color: white
+	border-radius: 3px
+	cursor: pointer
+	transition: all .5s ease
+	&:hover
+		background: lighten(#ff8f2b, 10%)
